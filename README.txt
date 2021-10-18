@@ -12,7 +12,7 @@
 
 3. 	N/A
 
-4. 	I worked with Apple to discuss the structure of our programs. 
+4. 	I worked with Apple to discuss the structure of our programs and debugging. 
 	2D Array: http://www.cplusplus.com/forum/beginner/42045/
 	generate random X's: https://www.geeksforgeeks.org/rand-and-srand-in-ccpp/
 	https://www.cplusplus.com/reference/cstdlib/srand/

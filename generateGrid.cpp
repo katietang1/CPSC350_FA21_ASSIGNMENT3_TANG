@@ -269,7 +269,7 @@ void generateGrid::donutMap(){
                     if(currGen[row-1][j+1] == 'X'){
                     counter++;
                     }
-                } else if (i-1 >=0 && j == col) { //right boarder
+                } else if (i-1 >=0 && j + 1== col) { //right boarder
                     if(currGen[i-1][0] == 'X'){
                     counter++;
                     }
@@ -320,7 +320,7 @@ void generateGrid::donutMap(){
                     if(currGen[i+1][j-1] == 'X'){
                     counter++;
                     }
-                }else if (i == row && j-1 >= 0){ //bottom boarder
+                }else if (i + 1 == row && j-1 >= 0){ //bottom boarder
                     if(currGen[0][j-1] == 'X'){
                     counter++;
                     }
@@ -338,11 +338,11 @@ void generateGrid::donutMap(){
                     if(currGen[i+1][j+1] == 'X'){
                     counter++;
                     } 
-                } else if (i == row && j+1 < col){ //bottom boarder
+                } else if (i + 1 == row && j+1 < col){ //bottom boarder
                     if(currGen[0][j+1] == 'X'){
                     counter++;
                     }
-                } else if (i+1 < row && j == col ) { //right boarder
+                } else if (i+1 < row && j + 1 == col ) { //right boarder
                     if(currGen[i+1][0] == 'X'){
                     counter++;
                     }
@@ -423,7 +423,7 @@ void generateGrid::mirrorMap(){
                     if(currGen[i][j+1] == 'X'){
                     counter++;
                     }
-                } else if (i-1 >=0 && j == col) { //right boarder
+                } else if (i-1 >=0 && j +1 == col) { //right boarder
                     if(currGen[i-1][j] == 'X'){
                     counter++;
                     }
@@ -474,7 +474,7 @@ void generateGrid::mirrorMap(){
                     if(currGen[i+1][j-1] == 'X'){
                     counter++;
                     }
-                }else if (i == row && j-1 >= 0){ //bottom boarder
+                }else if (i + 1 == row && j-1 >= 0){ //bottom boarder
                     if(currGen[i][j-1] == 'X'){
                     counter++;
                     }
@@ -492,11 +492,11 @@ void generateGrid::mirrorMap(){
                     if(currGen[i+1][j+1] == 'X'){
                     counter++;
                     } 
-                } else if (i == row && j+1 < col){ //bottom boarder
+                } else if (i + 1 == row && j+1 < col){ //bottom boarder
                     if(currGen[i][j+1] == 'X'){
                     counter++;
                     }
-                } else if (i+1 < row && j == col ) { //right boarder
+                } else if (i+1 < row && j + 1 == col ) { //right boarder
                     if(currGen[i+1][j] == 'X'){
                     counter++;
                     }
@@ -563,6 +563,7 @@ bool generateGrid::startGame(char userPreference){
             cout << endl;
         }
         cout << "Press Enter to Continue";
+        cout << endl;
         cin.ignore();   
     }
 
