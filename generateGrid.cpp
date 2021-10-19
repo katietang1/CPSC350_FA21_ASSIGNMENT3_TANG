@@ -69,7 +69,7 @@ void generateGrid::randomGrid(string mapPref){
         cout << "GENERATION 0: " << endl;
          for(i = 0; i<row; i++){
              for(j = 0; j<col; j++){
-                 cout << currGen[i][j] << " ";
+                 cout << currGen[i][j];
              }
              cout << endl;
         }
@@ -105,7 +105,7 @@ void generateGrid::fileGrid(string mapPref){
         cout << "GENERATION 0: " << endl;
          for(i = 0; i<row; i++){
             for(j = 0; j<col; j++){
-                cout << currGen[i][j] << " ";
+                cout << currGen[i][j];
             }
             cout << endl;
         }
@@ -550,7 +550,7 @@ bool generateGrid::startGame(char userPreference){
         cout << "GENERATION: " << generationNum << endl;
         for(int i = 0; i<row; i++){
              for(int j = 0; j<col; j++){
-                 cout << currGen[i][j] << " ";
+                 cout << currGen[i][j];
             }
             cout << endl;
         }
@@ -562,7 +562,7 @@ bool generateGrid::startGame(char userPreference){
         cout << "GENERATION: " << generationNum << endl;
         for(int i = 0; i<row; i++){
             for(int j = 0; j<col; j++){
-                cout << currGen[i][j] << " ";
+                cout << currGen[i][j];
             }
             cout << endl;
         }
@@ -580,7 +580,7 @@ bool generateGrid::startGame(char userPreference){
         file << "GENERATION: " << generationNum << endl;
         for(int i = 0; i<row; i++){
             for(int j = 0; j<col; j++){
-                file << currGen[i][j] << " ";
+                file << currGen[i][j];
             }
             file << endl;
         }
