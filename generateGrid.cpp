@@ -40,9 +40,9 @@ generateGrid::~generateGrid(){
 void generateGrid::randomGrid(string mapPref){
     if (mapPref == "r"){ 
         // prompt for dimensions and density
-        cout << "Please enter row number: " << endl;
+        cout << "Please enter the number of rows: " << endl;
         cin >> row;
-        cout << "Please enter column number: " << endl;
+        cout << "Please enter the number of rows: " << endl;
         cin >> col;
         cout << "Please enter population density: " << endl;
         cin >> density;
@@ -116,7 +116,7 @@ void generateGrid::fileGrid(string mapPref){
 //gameMode() prompt user for boundary mode then call functions accrodingly
 void generateGrid::gameMode(){
     string mode;
-    cout << "What boundary mode? c/d/m " << endl;
+    cout << "What boundary mode would you like to apply? c/d/m " << endl;
     cin >> mode;
     if (mode == "c"){
         classicMap();
@@ -131,7 +131,8 @@ void generateGrid::gameMode(){
 
 //classicMap() computes neighbors based on surrounding locations, will stop checking if isStable() becomes true
 void generateGrid::classicMap(){
-    cout << "Would you like a pause, press enter between generations, or print to a text file? p/e/t" << endl;
+    cout << "Would you like a pause, press enter between generations, or print to a text file?" << endl;
+    cout << "p / e / t" << endl;
     cin >> userPreference;
     if (userPreference == 't'){
         cout << "Please enter a file name: " << endl;
@@ -215,7 +216,8 @@ void generateGrid::classicMap(){
 
 //donutMap() computes neighbors based on surrounding locations and boarder wraps,  will stop checking if isStable() becomes true
 void generateGrid::donutMap(){
-    cout << "Would you like a pause, press enter, or print to a text file? p/e/t" << endl;
+    cout << "Would you like a pause, press enter, or print to a text file?" << endl;
+    cout << "p / e / t" << endl;
     cin >> userPreference;
     if (userPreference == 't'){
         cout << "Please enter a file name" << endl;
@@ -369,7 +371,8 @@ void generateGrid::donutMap(){
 
 //mirrorMap() computes neighbors based on surrounding locations and boarder reflections  will stop checking if isStable() becomes true
 void generateGrid::mirrorMap(){
-    cout << "Would you like a pause, press enter, or print to a text file? p/e/t" << endl;
+    cout << "Would you like a pause, press enter, or print to a text file?" << endl;
+    cout << "p / e / t" << endl;
     cin >> userPreference;
     if (userPreference == 't'){
         cout << "Please enter an output file name: " << endl;
@@ -543,7 +546,7 @@ bool generateGrid::startGame(char userPreference){
 
         }
     }
-    if (userPreference == 'p'){
+    if (userPreference == 'p'){ //pause 
         cout << "GENERATION: " << generationNum << endl;
         for(int i = 0; i<row; i++){
              for(int j = 0; j<col; j++){
@@ -551,10 +554,11 @@ bool generateGrid::startGame(char userPreference){
             }
             cout << endl;
         }
-        system("pause");
+        //system("pause");
+        cin.get();
     }
 
-    if (userPreference == 'e'){
+    if (userPreference == 'e'){ // enter
         cout << "GENERATION: " << generationNum << endl;
         for(int i = 0; i<row; i++){
             for(int j = 0; j<col; j++){
@@ -567,7 +571,7 @@ bool generateGrid::startGame(char userPreference){
         cin.ignore();   
     }
 
-    if (userPreference == 't'){
+    if (userPreference == 't'){ //text file
         ofstream file;
         file.open(fileName, std::ios::app);
         if(!file){
